@@ -12,3 +12,44 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+//MEDIA QUERY MANAGER
+/*
+0 - 600  PHONE
+600 - 900 TABBLET POTRAIT
+900 - 1200 TABLET LANDSCAPE
+1200 -1800 IS WHERE OUR M]NORMARL STYLES APPLY
+1800 + BIG DESKTOP
+*/
+
+
+@mixin respond-phone {
+    @media (max-width: 600px) {@content};
+}
+
+/*
+breakpoint argument choicescontent: 
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+1em = 16px
+*/
+
+@mixin  respond($breakpoint) {
+    @if $breakpoint == phone {
+          @media (max-width: 37.5em) {@content}; //600px
+    }
+        @if $breakpoint == tab-port {
+          @media (max-width: 56.25em) {@content}; //900px
+    }
+        @if $breakpoint == tab-land {
+          @media (max-width: 75em) {@content}; //1200px
+    }
+        @if $breakpoint == big-desktop {
+          @media (max-width: 112.5em) {@content};  //1800px
+    }
+}
+
+
