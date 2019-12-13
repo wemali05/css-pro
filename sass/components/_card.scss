@@ -12,6 +12,7 @@
         top: 0;
         left: 0;
         width: 100%;
+        -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
         border-radius: 3px;
         overflow: hidden;
@@ -154,7 +155,7 @@
         height: auto;
         border-radius: 3px;
         background-color: $color-white;
-         box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
 
         &__side {
             height: auto;
