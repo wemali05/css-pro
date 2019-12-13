@@ -19,7 +19,10 @@ html {
     // }
     // we remove the above because the below works perfectly with all sizes from above 
 
-   
+     @include respond(big-desktop) {
+         font-size: 75%; //1rem = 12px; 12/16 =75%
+     }
+
     @include respond(tab-land) {// WIDTH < 1200PX
         font-size: 56.25%; //1rem = 8px; 8/16 =56.25%
     }
@@ -28,13 +31,16 @@ html {
         font-size: 50%; //1rem = 8px; 8/16 =50%
     }
 
-    @include respond(big-desktop) {
-        font-size: 75%; //1rem = 12px; 12/16 =75%
-    }
+  
 }
 
 
 
 body {
     box-sizing: border-box;
+    padding: 3rem;
+
+       @include respond(tab-port) {
+        padding: 0;
+    }
 }
